@@ -63,17 +63,36 @@ Helper Functions are optional to write
 */
 //Helper Functions Start
 int isOperator(char *data){
+	if (data==nullptr)
 	return 0;
+	if (*data == '+' || *data == '-' || *data == '/' || *data == '*' || *data == '^')
+		return 1;
+	else
+		return 0;
 }
 int isOperand(char *data){
+	if (data==NULL)
+	return 0;
+	if (*data <= 65 || *data >= 127)
+		return 1;
 	return 0;
 }
 int getOperand(char *data){
 	//converts data string to an integer "123" => 123
-	return 0;
+	int num = 0;
+	if (data == NULL)
+		return 0;
+	while (*data != '\0')
+	{
+		num = num * 10 + *data - 48;
+		data = data + 1;
+	}
+	return num;
 }
 //Helper Functions end
 int solve_tree(struct enode *root){
+	if (root==NULL)
     return -1;
+
 }
 

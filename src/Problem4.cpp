@@ -37,5 +37,4 @@ struct node{
 };
 
 void merge_two_bst(struct node *root1, struct node *root2){
-	
 }
